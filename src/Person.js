@@ -11,13 +11,22 @@ const styles = {
 	imageContainer: {
 		background: '#81bc39',
 		textAlign: 'center',
-		position:'relative'
+		position:'relative',
+
 	},
 	list:{
 		listStyle: 'none',
+		textAlign:'center',
+		padding:0,
 	},
 	caps:{
 		textTransform:'capitalize',
+	},
+	image:{
+		borderRadius:100,
+		padding: 25,
+
+
 	}
 }
 
@@ -46,15 +55,15 @@ export default React.createClass({
 			<div>
 				<div style={styles.imageContainer}> 
 					<button style={styles.backButton} onClick={this.handleBack} >BACK</button>
-					<img src={contact.picture.medium} alt="contact selfie" />
+					<img style={styles.image} src={contact.picture.large} alt="contact selfie" />
 				</div>
 				<ul style={styles.list}>
 					<li style={styles.caps}>{contact.name.first} {contact.name.last}</li>
-					<hr/>
+					<hr width="60%"/>
 					<li>{contact.email}</li>
-					<hr/>
+					<hr width="60%"/>
 					<li>{contact.phone}</li>
-					<hr/>
+					<hr width="60%"/>
 					<li style={styles.caps}>{contact.location.city}, {contact.location.state}</li>
 
 				</ul>

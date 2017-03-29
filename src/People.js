@@ -7,14 +7,14 @@ const styles = {
   heading:{
     color:'white',
     background:'#81bc39',
-    padding:20
+    padding:20,
   },
   list:{
     listStyle: 'none',
     padding:10,
     textTransform:'capitalize',
     textDecoration:'none',
-    display:'inline-block',
+    
   },
   link:{
     textDecoration:'none',
@@ -35,8 +35,9 @@ export default React.createClass({
           	<li key={'clist' + contact.id}>
              <Link style={styles.link} to={'/person/' + contact.id}>
              <img src={contact.picture.thumbnail} alt={contact.name.first + contact.name.last} />
-              {contact.name.first} {contact.name.last}  </Link> </li>
-            ))}
+              {contact.name.first} {contact.name.last}  </Link><hr width="90%"/>
+            </li>
+            ))} 
 
            
           </ul>
